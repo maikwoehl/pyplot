@@ -7,15 +7,14 @@ def main():
     root = tk.Tk()
     root.title("Canvas")
     
-    canvas = tk.Canvas(root,width=1000,height=1000)
+    canvas = tk.Canvas(root,width=800,height=500)
     canvas.pack()
     
     exitBtn = tk.Button(root,text="Exit",command=exit)
     exitBtn.pack()
     
-    plot = plotter.Plotter(canvas,1000,1000,50)
+    plot = plotter.Plotter(canvas,50)
     plot.makeCross(100,150)
-    plot.makeLabels()
     
     root.mainloop()
     
